@@ -1,0 +1,411 @@
+:root{
+    --greyWeb: #1D1D1D;
+    --white: #FFF;
+    --black: #000;
+    --webFont: 'Open Sans', sans-serif;
+    --blueWeb2: #0ac1f8; 
+    --blueWeb: #00ade4;
+}
+
+/* General */
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body{
+    margin: 0;
+    /*background-color: var(--greyWeb);*/
+    background: rgb(29,29,29);
+    background: radial-gradient(circle, rgba(29,29,29,1) 88%, rgba(29,29,29,0.8757878151260504) 100%);
+    color: var(--white);
+    font-family: var(--webFont);
+}
+
+a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+#menu ul{
+    list-style: none;
+}
+
+.clearfix{
+    clear: both;
+    float: none;
+}
+
+/* Header */
+#header{
+    height: 160px;
+    width: 100%;
+    border-bottom: 3px solid var(--blueWeb2);
+}
+
+#logo{
+    width: 30%;
+    float: left;
+}
+
+#logo img{
+    display: block;
+    float: left;
+    margin-top: 20px;
+    height: 115px;
+}
+
+#menu{
+    width: 70%;
+    float: right;
+    text-align: right;
+    margin-top: 40px;
+}
+
+#menu ul{
+    float: right;
+    width: 60%;
+}
+
+#menu ul li{
+    display: inline-block;
+    height: 46px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+#menu ul li a{
+    line-height: 47px;
+}
+
+#menu ul li a:hover{
+    color: var(--blueWeb);
+}
+
+/* General Body */
+
+.center{
+    width: 80%;
+    margin: 0px auto;
+}
+
+.center-form{
+    text-align: center;
+}
+
+.subheader{
+    color: var(--blueWeb);
+    font-size: 45px;
+}
+
+.subheader-small{
+    margin-left: 15px;
+    font-size: 18px;
+}
+
+.active{
+    border-bottom: 1.5px solid var(--blueWeb2);
+}
+
+.container-grid,
+.grid-home{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 25px;
+    margin-top: 50px;
+    align-items: center;
+}
+
+/* Home Body */
+
+.container-grid .container-logo,
+.container-grid .img-about-me{
+    height: 400px;
+    width: auto;
+}
+
+
+.grid-home .container-home-text{
+    font-size: 60px;
+    line-height: 130px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.container-grid .grid-img{
+    display: flex;
+    justify-content: center;
+}
+
+/* About Me Body */
+
+.container-grid .container-about-text a{
+    color: var(--blueWeb2);
+}
+
+.container-grid .grid-img .img-about-me{
+    border-radius: 50%;
+    margin-top: 25px;
+    box-shadow: 0px 0px 30px 5px var(--blueWeb);
+}
+
+/* Skills Body*/
+.skills-subtitle{
+    display: flex;
+    margin-top: 50px;
+}
+
+.grid-imges{
+    width: 70%;
+    display: grid;
+    align-content: space-around;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.grid-imges img{
+    height: 150px;
+    width: auto;
+}
+
+/* Form Body */
+
+.mid-form{
+    width: 40%;
+    margin: 0px auto;
+}
+
+.mid-form label{
+    display: block;
+    float:left;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 17px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea{
+    width: 100%;
+    min-height: 30px;
+    border: 1.5px solid var(--blueWeb);
+    padding: 3px;
+    margin-bottom: 5px;
+    transition: 300ms all;
+    font-family: var(--webFont);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus{
+    box-shadow: 0px 0px 15px var(--blueWeb2);
+}
+
+textarea{
+    width: 100%;
+    height: 150px;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 150px;
+    max-height: 300px;
+}
+
+.btn{
+    display: block;
+    color: var(--blueWeb);
+    background: var(--greyWeb);
+    border: 1.5px solid var(--blueWeb);
+    margin-top: 10px;
+    padding: 15px; 
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: 300ms all;
+    cursor:pointer;
+}
+
+.btn:hover{
+    color: var(--white);
+    background:var(--blueWeb);
+}
+
+/* Footer */
+.footer{
+    background-color: var(--primarioOscuro);
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+}
+
+.footer .iconos-footer a .icon{
+    stroke: var(--blueWeb2);
+    stroke-width: 1;
+    fill: none;
+    width: 40px;
+    height: 40px;
+    margin-right: 7px;
+    margin-left: 7px;
+}
+
+.text-blue{
+    color: var(--blueWeb2);
+}
+
+/* Responsive Web Desing */
+@media (max-width: 1468px) {
+    .grid-imges{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1314px) {
+    .center{
+        width: 90%;
+    }
+
+    #menu ul{
+        width: auto;
+    }
+
+    .grid-home{
+        margin-top: 120px;
+    }
+
+    .grid-home .container-home-text{
+        font-size: 50px;
+        line-height: 90px;
+        margin-bottom: 10px;
+    }
+
+    /*.footer-home{
+        position: inherit;
+    }*/
+    
+    .container-logo{
+        height: 400px;
+    }
+
+    .mid-form{
+        width: 60%;
+    }
+}
+
+@media (max-width: 1105px) {
+    .grid-imges img{
+        height: 130px;
+    }
+}
+
+@media (max-width: 950px) {
+    #logo{
+        float: none;
+        width: auto;
+        margin: 0 auto;
+    }
+
+    #logo img{
+        float: none;
+        height: 130px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #header{
+        height: 190px;
+    }
+
+    .subheader{
+        text-align: center;
+    }
+
+    #menu,
+    #menu ul{
+        clear: both;
+        float: none;
+        text-align: center;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        line-height: 23px;
+    }
+
+    .grid-home,
+    .container-grid{
+        grid: none;
+    }
+
+    .grid-home{
+        margin-top: 0px;
+    }
+    
+    .grid-home .container-home-text p{
+        margin-bottom: 0px;
+        margin-top: 20px;
+    }
+    
+    .grid-home .container-home-text{
+        font-size: 42px;
+        line-height: 70px;
+        margin-bottom: 10px;
+    }
+
+    .container-home-text,
+    .grid-img,
+    .container-skills,
+    .grid-imges{
+        margin: 0 auto;
+    }
+
+    .container-logo{
+        height: 300px;
+    }
+
+    .grid-imges{
+        margin-top: 20px;
+        width: auto;
+    }
+
+    .footer{
+        position: inherit;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 630px) {
+    .grid-imges img{
+        height: 100px;
+    }
+
+    .mid-form{
+        width: 70%;
+    }
+}
+
+@media (max-width: 451px) {
+    #header {
+        height: 270px;
+    }
+
+    #menu ul li {
+        display: revert;
+        height: 30px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .grid-imges{
+        grid: none;
+    }
+
+    .grid-imges img{
+        height: 130px;
+    }
+
+    .mid-form{
+        width: 85%;
+    }
+}
