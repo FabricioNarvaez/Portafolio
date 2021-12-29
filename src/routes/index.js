@@ -21,15 +21,12 @@ router.post('/send-email', async (req, res) =>{
         </ul>
         <p>${message}</p>
     `;
-    console.log(usuario_mail);
-    console.log(contraseña_mail);
+
     const transporter = nodemailer.createTransport({
         host: host,
         port: puerto,
         secure: false,
         auth: {
-            //user: process.env.user, // Variable de entorno
-            //pass: process.env.password // Variable de entorno
             user: usuario_mail,
             pass: contraseña_mail
         }
