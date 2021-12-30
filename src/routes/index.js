@@ -1,52 +1,8 @@
-require('dotenv').config();
+'use strict'
 const { Router } = require('express');
-const nodemailer = require('nodemailer');
-// const swal = require('sweetalert2');
 const router = Router();
-const host = 'smtp.gmail.com';
-const puerto = '587';
+var appController = require('../controllers/index');
 
-const usuario_mail = process.env.EMAIL;
-const contraseña_mail = process.env.PASSWORD;
-
-router.post('/send-email', async (req, res) =>{
-    const {name, email, subject, message} = req.body; // Destructuro los datos del JSON que se envian
-    
-    contentHTML = `
-        <h1> User Information</h1>
-        <ul>
-            <li>Usuario: ${name}</li>
-            <li>Email: ${email}</li>
-            <li>Asunto: ${subject}</li>
-        </ul>
-        <p>${message}</p>
-    `;
-
-    const transporter = nodemailer.createTransport({
-        host: host,
-        port: puerto,
-        secure: false,
-        auth: {
-            user: usuario_mail,
-            pass: contraseña_mail
-        }
-    });
-
-    const info = await transporter.sendMail({
-        from: 'email',
-        to: 'fabricionarvaeztest@gmail.com',
-        subject: 'Formulario de contacto',
-        html: contentHTML
-    });
-
-    /*swal(
-        "¡Formulario enviado!", 
-        "El formulario se ha enviado correctamente, pronto recibirá una respuesta", 
-        "success"
-    );*/
-    
-    //res.redirect('/index.html');
-    res.send("<script>alert('Formulario enviado correctamente'); window.location.href = '/index.html'; </script>");
-})
+router.post('/send-email', appController.envioEmail);
 
 module.exports = router;
