@@ -21,9 +21,11 @@ function initVar(){
     });
 
     window.addEventListener('resize', ()=>{
-        if(screen.width > 451){
+        if(document.body.clientWidth > 451){
             menu.style.removeProperty('overflow');
             menu.style.removeProperty('width');
+            abrir.innerHTML = "&#9776";
+            cerrado = true;
         }
     })
 }

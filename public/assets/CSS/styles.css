@@ -397,7 +397,7 @@ textarea{
 
 @media (max-width: 451px) {
     #header {
-        height: 180px; /*150 px ajustado*/
+        height: 180px; 
     }
 
     /*#menu ul li {
