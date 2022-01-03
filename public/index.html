@@ -17,11 +17,14 @@
 
     <!-- links -->
     <link rel="stylesheet" href="/assets/CSS/styles.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,300;1,500&display=swap" rel="stylesheet">
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="./assets/JS/main.js"></script>
 </head>
-<body>
+<body onload="initVar();">
     <header id="header">
         <div class="center">
             <div id="logo">
@@ -46,6 +49,10 @@
                     </li>
                 </ul>
             </nav>
+            <div class="menu-lateral" id="open">
+                <span>&#9776;</span>
+                <!--<span>&#10005;</span>-->
+            </div>
         </div>
     </header>
 
@@ -93,7 +100,7 @@
 
         </div>
         <div class="text-footer">
-            <p>Desarrollado por <strong class="text-blue">Fabricio Narv&#225;ez</strong> &copy;2021</p>
+            <p>Desarrollado por <strong class="text-blue">Fabricio Narv&#225;ez</strong> &copy;2022</p>
         </div>
     </footer>
 </body>
