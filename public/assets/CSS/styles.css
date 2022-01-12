@@ -17,8 +17,8 @@ body{
     margin: 0;
     /*background-color: var(--greyWeb);*/
     background: rgb(29,29,29);
-    background: radial-gradient(circle, rgba(29,29,29,1) 88%, rgba(29,29,29,0.8757878151260504) 100%);
-    color: var(--white);
+   /* background: radial-gradient(circle, rgba(29,29,29,1) 88%, rgba(29,29,29,0.8757878151260504) 100%);*/
+   color: var(--white);
     font-family: var(--webFont);
 }
 

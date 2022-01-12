@@ -13,7 +13,7 @@ var controller = {
         const {name, email, subject, message} = req.body; // Destructuro los datos del JSON que se envian
         
         var contentHTML = `
-            <h1> User Information</h1>
+            <h1> Información del usuario</h1>
             <ul>
                 <li>Usuario: ${name}</li>
                 <li>Email: ${email}</li>
